@@ -23,12 +23,14 @@ export default class Ball{
     brush.fill();
   }
   move(){
-    if(this.x<=(0+this.r)||this.x>=(canvas.width-this.r)){
+    // if(this.x<=(0+this.r)||this.x>=(canvas.width-this.r)){
+    if(this.x<=(0-this.r)||this.x>=(canvas.width+this.r)){
       this.dX = this.dX*-1;
       this.randomColor();
       
     }
-    if(this.y<=(0+this.r)||this.y>=(canvas.height-this.r)){
+    // if(this.y<=(0+this.r)||this.y>=(canvas.height-this.r)){
+    if(this.y<=(0-this.r)||this.y>=(canvas.height+this.r)){
       this.dY = this.dY*-1;
       this.randomColor();
     }
@@ -38,7 +40,8 @@ export default class Ball{
     this.drawSelf();
   }
   randomColor(){
-    let colors = ["rgb(0, 183, 255)","rgb(0, 255, 191)","rgb(0, 255, 115)","rgb(0, 68, 255)","rgb(119, 0, 255)"];
+    // let colors = ["rgb(0, 183, 255)","rgb(0, 255, 191)","rgb(0, 255, 115)","rgb(0, 68, 255)","rgb(119, 0, 255)"];
+    let colors = ["rgba(0, 0, 255, 0.1)","rgba(0, 0, 255, 0.3)","rgba(0, 0, 255, 0.15)","rgba(0, 0, 255, 0.2)"];
     let output = colors[Math.round((Math.random()+.01)*colors.length)-1];
     this.col = output;
   }

@@ -48,18 +48,19 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 function randomColor(){
-  let colors = ["rgb(0, 183, 255)","rgb(0, 255, 191)","rgb(0, 255, 115)","rgb(0, 68, 255)","rgb(119, 0, 255)"];
+  // let colors = ["rgb(0, 183, 255)","rgb(0, 255, 191)","rgb(0, 255, 115)","rgb(0, 68, 255)","rgb(119, 0, 255)"];
+  let colors = ["rgba(0, 0, 255, 0.1)","rgba(0, 0, 255, 0.3)","rgba(0, 0, 255, 0.15)","rgba(0, 0, 255, 0.2)"];
   return colors[Math.round((Math.random()+.01)*colors.length)-1];
 }
 
 var ballArray = [];
-for(let i =0;i<20;i++){
-  let radius = 25+(Math.round(Math.random()*20));
+for(let i =0;i<10;i++){
+  let radius = canvas.height/2+(Math.round(Math.random()*(canvas.height/2)));
   let color = randomColor();
   let startx = radius+(Math.random()*(canvas.width-(2*radius)));
   let starty =radius+(Math.random()*(canvas.height-(2*radius)));
-  let xspd = Math.random()*5;
-  let yspd = Math.random()*5;
+  let xspd = Math.random()*1;
+  let yspd = Math.random()*1;
   ballArray.push(new Ball(radius,color,startx,starty,xspd,yspd));
 }
 

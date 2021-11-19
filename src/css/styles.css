@@ -56,7 +56,7 @@ button {
   height: 3vw;
   justify-self: center;
   border-radius:1.5vw;
-  background-color: orange;
+  background-color: rgb(0, 255, 115);
   border: none;
   margin: 1em;
   margin-top: 2em;
@@ -64,7 +64,8 @@ button {
   font-size:90%;
 }
 button:hover {
-  background-color: rgb(255, 102, 0);
+  background-color: rgb(119, 0, 255);
+  color: white;
 }
 #outputHolder {
   display: none;
