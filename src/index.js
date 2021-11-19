@@ -4,9 +4,18 @@ import ExchangeControl from './js/exchangeController.js';
 import Ball from './js/animationResources.js';
 
 var moneyChanger = new ExchangeControl;
+initializeController();
+
+
 
 async function initializeController(){
-  let data = await ExchangeControl.getExchangeRates();
+  let data = {};
+  if(window.sessionStorage.getItem('moneySaved') === null){
+    data = await ExchangeControl.getExchangeRates();
+    window.sessionStorage.setItem('moneySaved', JSON.stringify(data));
+  }else{
+    data = await JSON.parse(window.sessionStorage.getItem('moneySaved'));
+  }
   moneyChanger.exchangeList = data;
   populateLists();
 }
@@ -18,7 +27,7 @@ function populateLists(){
   }
 }
 
-initializeController();
+
 
 $('#exchange').submit(function(event){
   event.preventDefault();
