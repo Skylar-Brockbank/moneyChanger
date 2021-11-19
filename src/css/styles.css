@@ -1,0 +1,67 @@
+body{
+  background-color:rgb(230, 230, 255);
+  margin: 0;
+  padding: 0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+#pageTitle{
+  text-align: center;
+  font-size: 9vh;
+  color: rgba(0, 0, 0, 0.74);
+}
+#formHolder {
+  margin: 0 auto;
+  width: 60vw;
+  background-color: rgba(0, 0, 255, 0.226);
+  padding: 2vh 5vw;
+  box-sizing: border-box;
+  border-radius: 3vh;
+}
+#formHolder > form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#formHolder > form > label {
+  justify-self: center;
+  margin: 1em;
+}
+.selections label{
+  padding:1em;
+  justify-self: center;
+  background-color: rgba(0, 0, 255, 0.26);
+  border-radius: 1vh;
+}
+#sbox{
+  background-color: none;
+  justify-self: center;
+  width: 25vw;
+  display: flex;
+  justify-content: space-around;
+}
+button {
+  width: 7vw;
+  height: 3vw;
+  justify-self: center;
+  border-radius:1.5vw;
+  background-color: orange;
+  border: none;
+  margin: 1em;
+  margin-top: 2em;
+  font-weight: bolder;
+  font-size:90%;
+}
+button:hover {
+  background-color: rgb(255, 102, 0);
+}
+#outputHolder {
+  display: none;
+  background: rgba(255, 255, 255, 0.699);
+  width: 50vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 3vh 5vw;
+  text-align: center;
+  color:rgba(0, 0, 0, 0.74);
+  margin-top: 3vh;
+  border-radius: 3vh;
+}

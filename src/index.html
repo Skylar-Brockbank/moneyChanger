@@ -7,18 +7,25 @@
   <title>Document</title>
 </head>
 <body>
-  <form id='exchange'>
-    <label>Amount: 
-      <input type='number' step="0.01" id='originAmount' required>
-    </label>
-    <label>From:
-    </label>
-    <select name='fCurrency' id="originCurrency"></select>
-    <label>To:
-      <select name='tCurrency' id="destinationCurrency"></select>
-    </label>
-    <button type='submit'>convert</button>
-  </form>
-  <h1 id="output"></h1>
+  <h1 id='pageTitle'>Currency Converter</h1>
+  <div id='formHolder'>
+    <form id='exchange'>
+      <label>Amount: 
+        <input type='number' step="0.01" id='originAmount' required>
+      </label>
+      <div id = 'sbox' class="selections">
+        <label>From:
+          <select name='fCurrency' id="originCurrency"></select>
+        </label>
+        <label>To:
+          <select name='tCurrency' id="destinationCurrency"></select>
+        </label>
+      </div>
+      <button type='submit'>convert</button>
+    </form>
+  </div>
+  <div id='outputHolder'>
+    <h1 id="output"></h1>
+  </div>
 </body>
 </html>
