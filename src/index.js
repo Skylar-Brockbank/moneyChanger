@@ -28,5 +28,5 @@ $('#exchange').submit(function(event){
   let y = $('#originCurrency').val();
   let z = $('#destinationCurrency').val();
   console.log(x+" , "+y+" , "+z);
-  ExchangeControl.convertCurrency(x,y,z);
+  $("#output").text(ExchangeControl.convertCurrency(x,y,z));
 })
