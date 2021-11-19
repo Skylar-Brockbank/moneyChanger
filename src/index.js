@@ -1,4 +1,5 @@
 import $ from 'jQuery';
+import './css/styles.css';
 import ExchangeControl from './js/exchangeController.js';
 
 var moneyChanger = new ExchangeControl;
@@ -12,11 +13,8 @@ async function initializeController(){
 
 function populateLists(){
   for(let key in moneyChanger.exchangeList.conversion_rates){
-    
-    // console.log(key+" : "+moneyChanger.exchangeList.conversion_rates[key]);
-
-    $("#originCurrency").append('<option value="'+moneyChanger.exchangeList.conversion_rates[key]+'">'+key+'</option>')
-    $("#destinationCurrency").append('<option value="'+moneyChanger.exchangeList.conversion_rates[key]+'">'+key+'</option>')
+    $("#originCurrency").append('<option value="'+moneyChanger.exchangeList.conversion_rates[key]+','+key+'">'+key+'</option>')
+    $("#destinationCurrency").append('<option value="'+moneyChanger.exchangeList.conversion_rates[key]+','+key+'">'+key+'</option>')
   }
 }
 
@@ -25,8 +23,10 @@ initializeController();
 $('#exchange').submit(function(event){
   event.preventDefault();
   let x = $('#originAmount').val();
-  let y = $('#originCurrency').val();
-  let z = $('#destinationCurrency').val();
-  console.log(x+" , "+y+" , "+z);
-  $("#output").text(ExchangeControl.convertCurrency(x,y,z));
+  let y = $('#originCurrency').val().split(",")[0];
+  let z = $('#destinationCurrency').val().split(",")[0];
+  let yc = $('#originCurrency').val().split(",")[1];
+  let zc = $('#destinationCurrency').val().split(",")[1];
+  console.log(x+" , "+y+" "+yc+" , "+z+" "+zc);
+  $("#output").text(x+" "+yc+" is "+ExchangeControl.convertCurrency(x,y,z)+" "+zc);
 })
