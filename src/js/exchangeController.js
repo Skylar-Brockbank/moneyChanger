@@ -5,12 +5,12 @@ export default class ExchangeControl{
   static async getExchangeRates(){
     try{
       const rawPromise = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
-      if(!rawPromise.ok){
+      if(!rawPromise.result === 'success'){
         throw Error(rawPromise.statusText);
       }
       return await rawPromise.json();
     }catch(error){
-      return error.message;
+      return error;
     } 
   }
   static convertCurrency(amount, origin, destination){

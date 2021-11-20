@@ -12,8 +12,6 @@ canvas {
   box-sizing: border-box;
 }
 body{
-  min-width:1234px;
-  min-height:644px;
   background-color:rgb(230, 230, 255);
   margin: 0;
   padding: 0;

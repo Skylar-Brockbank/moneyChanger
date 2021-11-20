@@ -16,6 +16,10 @@ async function initializeController(){
   }else{
     data = await JSON.parse(window.sessionStorage.getItem('moneySaved'));
   }
+  if(data['result']==='error'){
+    $("#output").text(data['error-type']);
+    $("#outputHolder").show();
+  }
   moneyChanger.exchangeList = data;
   populateLists();
 }
