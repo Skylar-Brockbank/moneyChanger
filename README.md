@@ -20,11 +20,11 @@ _If one wishes to obtain something, something of equal value must be given. This
 ## Setup/Installation Requirements
 
 * _Click the green "Code" button and Download Zip _
+* _go to [https://www.exchangerate-api.com/](https://www.exchangerate-api.com/) and get a free API key
 * _Extract the contents of the zip file to a folder on your machine_
 * _Use your terminal to navigate into the extracted folder_
-* _type ```touch dist```_
-* _type ```npm install```_
-* _type ```npm run build```_
+* _make a .env file and inside type `API_KEY= (your API ket from step 2)` and save it_
+* _type ```npm run start```_
 * _Run the Index.html file in the dist folder with your browser of choice (I recommend Chrome)_
 
 * _alternatively you can [clone this repository](https://www.learnhowtoprogram.com/introduction-to-programming/git-html-and-css/practice-github-remote-repositories) from Git Hub_
