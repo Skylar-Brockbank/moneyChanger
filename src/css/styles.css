@@ -1,4 +1,5 @@
 *{
+  font-size:5vh;
   margin:0;
 }
 canvas {
@@ -11,6 +12,8 @@ canvas {
   box-sizing: border-box;
 }
 body{
+  min-width:1234px;
+  min-height:644px;
   background-color:rgb(230, 230, 255);
   margin: 0;
   padding: 0;
@@ -26,7 +29,7 @@ body{
   margin: 0 auto;
   width: 60vw;
   background-color: rgba(122, 122, 255, 0.801);
-  padding: 2vh 5vw;
+  padding: 1vh 5vw;
   box-sizing: border-box;
   border-radius: 3vh;
 }
@@ -36,7 +39,7 @@ body{
 }
 #formHolder > form > label {
   justify-self: center;
-  margin: 1em;
+  margin: 2em;
 }
 .selections label{
   padding:1em;
@@ -47,15 +50,15 @@ body{
 #sbox{
   background-color: none;
   justify-self: center;
-  width: 25vw;
+  width: 40vw;
   display: flex;
   justify-content: space-around;
 }
 button {
-  width: 7vw;
-  height: 3vw;
+  width: 12vw;
+  height: 4vw;
   justify-self: center;
-  border-radius:1.5vw;
+  border-radius:2vw;
   background-color: rgb(0, 255, 115);
   border: none;
   margin: 1em;
@@ -78,4 +81,8 @@ button:hover {
   color:rgba(0, 0, 0, 0.74);
   margin-top: 3vh;
   border-radius: 3vh;
+}
+.test{
+
+  color: rgba(0, 0, 255, 0.589);
 }

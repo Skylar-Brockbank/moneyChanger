@@ -34,7 +34,8 @@ _If one wishes to obtain something, something of equal value must be given. This
 
 ## Known Bugs
 
-* _no known bugs_
+* _canvas doesn't react to on the fly window resizes_
+* _divs get weird if you make the window too narrow_
 
 ## License
 
