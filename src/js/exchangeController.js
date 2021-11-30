@@ -14,7 +14,7 @@ export default class ExchangeControl{
     } 
   }
   static convertCurrency(amount, origin, destination){
-    let cFactor = origin/destination;
+    let cFactor = destination/origin;
     let output = amount*cFactor;
     return output.toFixed(2);
   }
